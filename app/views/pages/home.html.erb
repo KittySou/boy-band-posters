@@ -1,2 +1,20 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BoyBandPosters Home</title>
+
+    <%= stylesheet_link_tag "home", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.scdn.co/image/ab6761610000e5ebd642648235ebf3460d2d1f6a);">
+      <div class="container">
+        <h1>Welcome to Boy <strong>Band Posters</strong>!</h1>
+        <h2>Find posters of your favorite Boy Bands.</h2>
+      </div>
+    </div>
+  </body>
+
+</html>
