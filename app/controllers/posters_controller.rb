@@ -4,5 +4,4 @@ class PostersController < ApplicationController
     @posters = Poster.all
   end
 
-
 end
