@@ -7,4 +7,9 @@ class PostersController < ApplicationController
   def new
     @poster = Poster.new
   end
+
+  def show
+    @poster = Poster.find(params[:id])
+  end
+
 end
