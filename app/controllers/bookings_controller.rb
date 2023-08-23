@@ -3,6 +3,7 @@ class BookingsController < ApplicationController
   def index
     @bookings = Booking.where(user_id: current_user.id)
   end
+
   def new
     @booking = Booking.new
   end
@@ -15,6 +16,7 @@ class BookingsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
 
   def show
     set_booking
@@ -23,7 +25,7 @@ class BookingsController < ApplicationController
 
   def update
     set_booking
-    @booking.status = "Pending "
+    @booking.status = "Pending"
     @booking.save!
     redirect_to booking_path(@booking)
   end
@@ -35,9 +37,10 @@ class BookingsController < ApplicationController
   end
 
   private
-def booking_params
-  params.require(:booking).permit(:checkin_on, :checkout_on, :value, :status)
-end
+
+  def booking_params
+    params.require(:booking).permit(:checkin_on, :checkout_on, :value, :status)
+  end
 
   def set_booking
     @booking = Booking.find(params[:id])
