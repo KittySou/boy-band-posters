@@ -14,11 +14,21 @@
         <% if user_signed_in? %>
 
           <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
+            <%= link_to "Home", "/home", class: "nav-link" %>
           </li>
+
           <li class="nav-item">
-            <%= link_to "Bookings", "#", class: "nav-link" %>
+            <%= link_to "Browse posters", "/posters", class: "nav-link" %>
           </li>
+
+          <li class="nav-item">
+          <%= link_to "Post a new poster", "/posters/new", class: "nav-link" %>
+          </li>
+
+          <li class="nav-item">
+            <%= link_to "View all poster bookings", "/bookings", class: "nav-link" %>
+          </li>
+
           <li class="nav-item dropdown">
             <%= image_tag "https://freesvg.org/img/abstract-user-flat-4.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
