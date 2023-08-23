@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :posters
 
+  get "posters/new", to: "posters#new"
 end
