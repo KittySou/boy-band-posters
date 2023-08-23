@@ -1,8 +1,14 @@
-<h1><%= @poster.band_name %></h1>
+<div class="container">
+  <h1><%= @poster.band_name %></h1>
+  <div class="row">
+    <%= image_tag @poster.photo, class: "col-4 show-image"%>
 
-<p>Description: <%= @poster.description %></p>
-<p>Price per day: <%= @poster.price_per_day %></p>
-<p>Height: <%= @poster.height %></p>
-<p>Width: <%= @poster.width %></p>
+    <div class="col-8" id="show-details">
+      <p><i class="fa-solid fa-circle-info"></i> <%= @poster.description %></p>
+      <p><i class="fa-solid fa-dollar-sign"></i> <%= @poster.price_per_day %></p>
+      <p><i class="fa-solid fa-up-down"></i> cm <%= @poster.height %></p>
+      <p><i class="fa-solid fa-arrows-left-right"></i> cm <%= @poster.width %></p>
+    </div>
 
-<%= image_tag @poster.photo %>
+  </div>
+</div>
