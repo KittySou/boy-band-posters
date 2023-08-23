@@ -15,6 +15,7 @@ class BookingsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
 
   def show
     set_booking
@@ -35,11 +36,11 @@ class BookingsController < ApplicationController
   end
 
   private
-def booking_params
-  params.require(:booking).permit(:checkin_on, :checkout_on, :value, :status)
-end
+  def booking_params
+    params.require(:booking).permit(:checkin_on, :checkout_on, :value, :status)
+  end
 
   def set_booking
-    @booking = Booking.find(params[:id])
-  end
+     @booking = Booking.find(params[:id])
+   end
 end
