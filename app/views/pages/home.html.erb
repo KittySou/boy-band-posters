@@ -1,2 +1,21 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BoyBandPosters Home</title>
+
+    <%= stylesheet_link_tag "home", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://m.media-amazon.com/images/M/MV5BMDQ2MmJiYTUtNjhjYy00YzE5LTkzN2EtNWQ3NDg0ZGI5YTczXkEyXkFqcGdeQXVyNDYzNDg2MTM@._V1_.jpg);">
+      <div class="container">
+        <h1>Welcome to Boy <strong>Band Posters</strong>!</h1>
+        <h2>Find posters of your favorite Boy Bands.</h2>
+      </div>
+    </div>
+    <marquee>ABBA - Backstreet Boys - The Beatles - BTS - Hannah Montana - Jonas Brothers - NSYNC - One Direction - Spice Girls</marquee>
+  </body>
+
+</html>

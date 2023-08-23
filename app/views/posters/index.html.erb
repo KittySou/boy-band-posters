@@ -1,7 +1,12 @@
+posters-controller-index
 <h1>Posters List!</h1>
 
 <ul>
-  <% @posters.each do |poster| %>
-  <li><%= poster.band_name %></li>
-<% end %>
+<% @posters.each do |poster| %>
+  <li>
+  <%= poster.band_name %>
+  </li>
 </ul>
+
+<% end %>
+
