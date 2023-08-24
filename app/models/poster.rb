@@ -6,7 +6,7 @@ class Poster < ApplicationRecord
   validates :photo, presence: true
 
   pg_search_scope :search_by_band_name_and_description,
-  against: [:band_name, :description ],
+  against: [ :band_name, :description ],
   using: {
     tsearch: { prefix: true }
   }
