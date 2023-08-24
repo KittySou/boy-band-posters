@@ -4,6 +4,7 @@
     <h1>Book this poster!</h1>
   </div>
 
+<div class="mx-auto col-8">
     <%= form_with model: @booking, url: bookings_path, method: :post, class: "form" do |form| %>
       <div class="form-group">
         <%= form.label :checkin_on, class: "control-label" %>
@@ -29,4 +30,5 @@
         <%= form.submit "Create a new booking", class: "btn btn-primary" %>
       </div>
     <% end %>
+</div>
   </div>
