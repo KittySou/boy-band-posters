@@ -5,22 +5,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  get "/bookings", to: "bookings#index"
-  get 'bookings/new', to: 'bookings#new'
-  # get "/posters/:id/bookings/", to: "bookings#index"
-  # get "/posters", to: "posters#index"
+  resources :posters
 
-  resources :posters do
-    resources :bookings, only: [:create]
+  get "posters/new", to: "posters#new"
 
-  end
-  resources :bookings, only: [:index, :show, :destroy, :update] do
-      resources :reviews, only: [:create, :index, :show]
-    end
+  resources :bookings, only: [:create, :destroy]
 
-  namespace :my do
-    resources :posters, only: [:index]
-    resources :bookings, only: [:index, :update]
-  end
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
 end

@@ -1,0 +1,16 @@
+<div class="text-center padded">
+
+  <div class="container">
+    <h1>Detalhes da Reserva</h1>
+    <% if @booking %>
+      <p><strong>ID:</strong> <%= @booking.id %></p>
+      <p><strong>Data de Check-In:</strong> <%= @booking.checkin_on %></p>
+      <p><strong>Data de Check-Out:</strong> <%= @booking.checkout_on %></p>
+      <p><strong>Valor:</strong> <%= @booking.value %> €</p>
+    <% else %>
+      <p>Reserva não encontrada.</p>
+    <% end %>
+
+    <%= link_to "Voltar para a lista de reservas", bookings_path, class: "btn btn-primary" %>
+  </div>
+</div>
