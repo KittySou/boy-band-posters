@@ -22,11 +22,13 @@ class BookingsController < ApplicationController
     end
   end
 
-  def show
-    set_booking
-    @poster = @booking.poster
-  end
+    def destroy
+      @booking = Booking.find(params[:id])
+      @booking.destroy
+      redirect_to bookings_path, status: :see_other
+    end
 
+ # If statement for status, ALWAYS TRUE OR FALSE
   def update
     set_booking
     @booking.status = "Pending"
@@ -34,19 +36,21 @@ class BookingsController < ApplicationController
     redirect_to booking_path(@booking)
   end
 
-  def destroy
-    @booking = Booking.find(params[:id])
-    @booking.destroy
-    redirect_to booking(@review.poster), status: :see_other
-  end
+    def index
+      @bookings = Booking.all
+    end
 
-  private
+    def new
+      @booking = Booking.new
+    end
 
-  def booking_params
-    params.require(:booking).permit(:checkin_on, :checkout_on, :value, :status)
-  end
+    private
 
-  def set_booking
-    @booking = Booking.find(params[:id])
+    def booking_params
+      params.require(:booking).permit(:checkin_on, :checkout_on, :value, :status)
+    end
+
+    def set_booking
+      @booking = Booking.find(params[:id])
+    end
   end
-end
