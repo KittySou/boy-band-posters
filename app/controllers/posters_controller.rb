@@ -1,5 +1,4 @@
 class PostersController < ApplicationController
-
   def index
     @posters = Poster.all
   end
@@ -25,6 +24,6 @@ class PostersController < ApplicationController
   private
 
   def poster_params
-    params.require(:poster).permit(:band_name, :description, :price_per_day, :height, :width, :picture_url)
+    params.require(:poster).permit(:band_name, :description, :price_per_day, :height, :width, :photo)
   end
 end
