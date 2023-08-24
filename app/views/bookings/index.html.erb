@@ -17,11 +17,11 @@
     <% @bookings.each do |booking| %>
       <tr>
         <td><%= booking.id %></td>
-        <td><%= booking.id %></td>
+        <td><%= booking.poster.band_name %></td>
         <td><%= booking.checkin_on %></td>
         <td><%= booking.checkout_on %></td>
-        <td><%= number_to_currency(booking.value, unit: 'CAD') %></td>
-        <td><%= booking.status ? 'Active' : 'Inactive' %></td>
+        <td><%= number_to_currency(booking.poster.price_per_day, unit: 'CAD') %></td>
+        <td><%= booking.status ? 'Confirm' : 'Canceled' %></td>
         <td>
           <%= link_to 'Confirm', edit_booking_path(booking), class: 'btn btn-success btn-sm mr-1' %>
           <%= link_to 'Decline', booking_path(booking), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
