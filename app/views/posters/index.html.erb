@@ -1,10 +1,16 @@
 <h1>Posters</h1>
 
-<div>
+<div class="poster-index">
   <% @posters.each do |poster| %>
-    <h2><%= link_to poster.band_name, poster_path(poster) %></h2>
-    <%= cl_image_tag poster.photo.key, height: 400, width: 250, crop: :fill %>
+    <%= link_to poster_path(poster) do %>
+      <div class="card-product">
+        <%= cl_image_tag poster.photo.key %>
+        <div class="card-product-infos">
+          <h1 class="card-title">
+          <%= poster.band_name %>
+          </h1>
+        </div>
+      </div>
+    <% end %>
   <% end %>
 </div>
-
-# style="display: flex; justify-content: space-between; align-items: center width:100%"
