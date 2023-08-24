@@ -3,7 +3,9 @@
 <div>
   <% @posters.each do |poster| %>
     <h2><%= link_to poster.band_name, poster_path(poster) %></h2>
-    <%= cl_image_tag poster.photo.key, height: 400, width: 250, crop: :fill %>
+    <% if poster.photo.attached? %>
+      <%= cl_image_tag poster.photo.key, height: 400, width: 250, crop: :fill %>
+    <% end %>
   <% end %>
 </div>
 
