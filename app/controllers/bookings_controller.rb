@@ -1,11 +1,7 @@
 class BookingsController < ApplicationController
 
   def index
-<<<<<<< HEAD
     @bookings_user = Booking.where(user: current_user)
-=======
-    @bookings = Booking.where(user_id: current_user.id)
->>>>>>> 43ca2a8f69ee5cd791b271cc43c3108099eaeed9
   end
 
   def new
