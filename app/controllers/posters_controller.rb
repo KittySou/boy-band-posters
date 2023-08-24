@@ -25,6 +25,6 @@ class PostersController < ApplicationController
   private
 
   def poster_params
-    params.require(:poster).permit(:band_name, :description, :price_per_day, :height, :width)
+    params.require(:poster).permit(:band_name, :description, :price_per_day, :height, :width, :picture_url)
   end
 end
