@@ -9,7 +9,7 @@
         <p><strong>End-Date:</strong> <%= @booking.checkout_on %></p>
         <p><strong>Value:</strong> <%= number_to_currency(@booking.poster.price_per_day, unit: 'CAD') %></p>
         <p><strong>Status:</strong> <%= @booking.status ? 'Confirm' : 'Cancel' %></p>
-      <%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
+
       <% else @booking.status == false %>
         <h1>You droped the booking 😔</h1>
         <p>Booking not found</p>
