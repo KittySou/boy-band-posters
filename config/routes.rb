@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :posters, only: [:index, :show]
-  resources :bookings, only: [:index, :show, :edit, :update, :new, :create]
+  resources :bookings, only: [:index, :show, :edit, :update, :new, :create, :destroy]
 end

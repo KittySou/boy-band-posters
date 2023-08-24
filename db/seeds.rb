@@ -73,6 +73,6 @@ booking_2 = Booking.create(
   checkin_on: Date.today + 2, checkout_on: Date.today + 4, user: users.sample, poster: posters.sample, status: false
 )
 
-booking_ = Booking.create(
+booking_3 = Booking.create(
   checkin_on: Date.today + 1, checkout_on: Date.today + 3, user: users.sample, poster: posters.sample, status: nil
 )
