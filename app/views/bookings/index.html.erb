@@ -5,7 +5,7 @@
   <thead class="thead-dark">
 
     <tr>
-      <th>Booking Id</th>
+      <th>User Renter</th>
       <th>Poster</th>
       <th>Start-Date</th>
       <th>End-Date</th>
@@ -17,8 +17,9 @@
   <tbody>
     <% @bookings.each do |booking| %>
       <tr>
-        <td><%= booking.id %></td>
-        <td><%= booking.poster.band_name %></td>
+        <td><%= booking.user.first_name %></td>
+        <td><%= booking.poster.band_name  %>
+        <%= image_tag booking.poster.photo, class: "img-thumbnail"%></td>
         <td><%= booking.checkin_on %></td>
         <td><%= booking.checkout_on %></td>
         <td><%= number_to_currency(booking.poster.price_per_day, unit: 'CAD') %></td>
@@ -30,6 +31,8 @@
           <% else %>
             Rejected
           <% end %>
+        <td>
+          <%= booking.status ? 'Confirm' : 'Canceled' %></td>
         <td>
         <% unless booking.status  %>
           <%= link_to 'Confirm', booking_path(booking), data: { "turbo-method": :patch } , class: 'btn btn-success btn-sm mr-1' %>
