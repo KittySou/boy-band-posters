@@ -1,9 +1,12 @@
-<%= simple_form_for(poster) do |f| %>
-  <%= f.input :band_name %>
-  <%= f.input :description %>
-  <%= f.input :price_per_day %>
-  <%= f.input :height %>
-  <%= f.input :width %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
+<div class="mx-auto col-6">
+  <%= simple_form_for(poster) do |f| %>
+  <h1>New Poster</h1>
+    <%= f.input :band_name %>
+    <%= f.input :description %>
+    <%= f.input :price_per_day %>
+    <%= f.input :height %>
+    <%= f.input :width %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit %>
+  <% end %>
+</div>
