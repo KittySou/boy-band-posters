@@ -26,14 +26,19 @@ class BookingsController < ApplicationController
 
  # If statement for status, ALWAYS TRUE OR FALSE
   def update
+
     set_booking
-    @booking.status = "Pending"
+    @booking.status = true
     @booking.save!
     redirect_to booking_path(@booking)
   end
 
     def index
       @bookings = Booking.all
+    end
+
+    def show
+      @booking = Booking.find(params[:id])
     end
 
     def new
