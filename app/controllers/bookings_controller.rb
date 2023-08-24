@@ -23,6 +23,13 @@ class BookingsController < ApplicationController
       @bookings = Booking.all
     end
 
+    def edit
+    end
+
+    def new
+      @booking = Booking.new
+    end
+
     private
 
     def booking_params

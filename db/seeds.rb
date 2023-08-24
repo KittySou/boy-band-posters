@@ -60,9 +60,19 @@ file = URI.open("https://i.ebayimg.com/images/g/GH0AAOSw1~tef1hN/s-l1200.jpg")
 poster_9.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 poster_9.save
 
-poster_1 = Poster.find(2)
-poster_4 = Poster.find(4)
-poster_8 = Poster.find(8)
 
-booking_1 = Booking.new(checkin_on: Date.today + 1, checkout_on: Date.today + 4, value: 10, status: "confirmed", user: user_1, poster: poster_2 )
-booking_1.save
+Booking.destroy_all
+users = User. all
+posters = Poster.all
+
+booking_1 = Booking.create(
+  checkin_on: Date.today + 1, checkout_on: Date.today + 3, user: users.sample, poster: posters.sample, status: "Confirmed"
+)
+
+booking_2 = Booking.create(
+  checkin_on: Date.today + 2, checkout_on: Date.today + 4, user: users.sample, poster: posters.sample, status: "Confirmed"
+)
+
+booking_ = Booking.create(
+  checkin_on: Date.today + 1, checkout_on: Date.today + 3, user: users.sample, poster: posters.sample, status: "Confirmed"
+)
