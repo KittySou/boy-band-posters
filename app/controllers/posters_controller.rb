@@ -1,5 +1,4 @@
 class PostersController < ApplicationController
-
   def index
     @posters = Poster.all
   end
@@ -12,4 +11,19 @@ class PostersController < ApplicationController
     @poster = Poster.find(params[:id])
   end
 
+  def create
+    @poster = Poster.create(poster_params)
+    @poster.user = current_user
+    if @poster.save
+      redirect_to posters_path(@poster)
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  private
+
+  def poster_params
+    params.require(:poster).permit(:band_name, :description, :price_per_day, :height, :width, :photo)
+  end
 end
