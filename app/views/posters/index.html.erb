@@ -1,7 +1,16 @@
 <h1>Posters</h1>
 
-<ul>
+<div class="poster-index">
   <% @posters.each do |poster| %>
-    <li><%= link_to poster.band_name, poster_path(poster) %></li>
+    <%= link_to poster_path(poster) do %>
+      <div class="card-product">
+        <%= cl_image_tag poster.photo.key %>
+        <div class="card-product-infos">
+          <h1 class="card-title">
+          <%= poster.band_name %>
+          </h1>
+        </div>
+      </div>
+    <% end %>
   <% end %>
-</ul>
+</div>
