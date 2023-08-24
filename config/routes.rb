@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+<<<<<<< HEAD
 #   get "/bookings", to: "bookings#index"
 #   get 'bookings/new', to: 'bookings#new'
 #   # get "/posters/:id/bookings/", to: "bookings#index"
@@ -25,5 +26,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get "posters/new", to: "posters#new"
   get "posters", to: "posters#create"
+=======
+>>>>>>> master
 
+  resources :posters, only: [:index, :show]
+  resources :bookings, only: [:index, :show, :edit, :update, :new, :create]
 end
