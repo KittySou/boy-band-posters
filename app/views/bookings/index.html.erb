@@ -22,7 +22,14 @@
         <td><%= booking.checkin_on %></td>
         <td><%= booking.checkout_on %></td>
         <td><%= number_to_currency(booking.poster.price_per_day, unit: 'CAD') %></td>
-        <td><%= booking.status ? 'Confirm' : 'Canceled' %></td>
+        <td>
+          <% if booking.status.nil?  %>
+            Pending
+          <% elsif booking.status == true  %>
+            Confirmed
+          <% else %>
+            Rejected
+          <% end %>
         <td>
         <% unless booking.status  %>
           <%= link_to 'Confirm', booking_path(booking), data: { "turbo-method": :patch } , class: 'btn btn-success btn-sm mr-1' %>
