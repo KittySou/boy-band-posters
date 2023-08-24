@@ -14,19 +14,19 @@
         <% if user_signed_in? %>
 
           <li class="nav-item active">
-            <%= link_to "Home", "/home", class: "nav-link" %>
+            <%= link_to "Home", "/", class: "nav-link btn btn-flat"  %>
           </li>
 
           <li class="nav-item">
-            <%= link_to "Browse posters", "/posters", class: "nav-link" %>
+            <%= link_to "Browse posters", "/posters", class: "nav-link btn btn-flat" %>
           </li>
 
           <li class="nav-item">
-          <%= link_to "Post a new poster", "/posters/new", class: "nav-link" %>
+          <%= link_to "Post a new poster", "/posters/new", class: "nav-link btn btn-flat" %>
           </li>
 
           <li class="nav-item">
-            <%= link_to "View all poster bookings", "/bookings", class: "nav-link" %>
+            <%= link_to "View all poster bookings", "/bookings", class: "nav-link btn btn-flat" %>
           </li>
 
           <li class="nav-item dropdown">
