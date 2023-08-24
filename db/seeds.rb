@@ -58,4 +58,21 @@ poster_8.save!
 poster_9 = Poster.new(band_name: "THE BEATLES", description: "THE BEATLES Official Poster Book", price_per_day:20, height:90, width:45, user:user_3)
 file = URI.open("https://i.ebayimg.com/images/g/GH0AAOSw1~tef1hN/s-l1200.jpg")
 poster_9.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-poster_9.save!
+poster_9.save
+
+
+Booking.destroy_all
+users = User. all
+posters = Poster.all
+
+booking_1 = Booking.create(
+  checkin_on: Date.today + 1, checkout_on: Date.today + 3, user: users.sample, poster: posters.sample, status: true
+)
+
+booking_2 = Booking.create(
+  checkin_on: Date.today + 2, checkout_on: Date.today + 4, user: users.sample, poster: posters.sample, status: false
+)
+
+booking_ = Booking.create(
+  checkin_on: Date.today + 1, checkout_on: Date.today + 3, user: users.sample, poster: posters.sample, status: nil
+)
