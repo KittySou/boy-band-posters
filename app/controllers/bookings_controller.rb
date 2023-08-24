@@ -9,7 +9,7 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking _params)
+    @booking = Booking.new('booking _params')
     @booking.poster = @poster
     if @review.save
       redirect_to poster_path(@poster)
@@ -48,7 +48,7 @@ class BookingsController < ApplicationController
     private
 
     def booking_params
-      params.require(:booking).permit(:checkin_on, :checkout_on, :value, :status)
+      params.require(:booking).permit(:checkin_on, :checkout_on, :value, :status, :create)
     end
 
     def set_booking
