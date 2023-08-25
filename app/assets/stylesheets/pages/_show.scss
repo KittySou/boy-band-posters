@@ -1,15 +1,19 @@
 @import "home";
 
+body {
+  background-color: $blue;
+}
+
+.row {
+  margin-left: 50px;
+}
+
 .show-image {
   max-height: 70opx;
   margin-right: 10 px;
   object-fit: cover;
   object-position: top;
   box-shadow: 5px 5px 2px #ccc;
-}
-
-#show-details {
-  font-size: 30px;
 }
 
 .btn-flat {
