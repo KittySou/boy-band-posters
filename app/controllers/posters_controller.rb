@@ -15,7 +15,7 @@ class PostersController < ApplicationController
     @poster = Poster.create(poster_params)
     @poster.user = current_user
     if @poster.save
-      redirect_to posters_path(@poster)
+      redirect_to poster_path(@poster)
     else
       render :new, status: :unprocessable_entity
     end

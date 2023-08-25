@@ -4,26 +4,32 @@
     <h1>Rental request details:</h1>
   </div>
 
+  <div class="mx-auto col-8">
     <%= form_with model: @booking, url: bookings_path, method: :post, class: "form" do |form| %>
-      <div class="form-group">
-        <%= form.label :checkin_on, class: "control-label" %>
-        <%= form.date_field :checkin_on, class: "form-control" %>
+      <div class="form-group mb-4">
+        <%= form.label :book_this_poster_from, class: "control-label" %>
+        <%= form.date_field :checkin_on, class: "form-control", id: "checkin_date" %>
       </div>
 
-      <div class="form-group">
-        <%= form.label :checkout_on, class: "control-label" %>
-        <%= form.date_field :checkout_on, class: "form-control" %>
+      <div class="form-group mb-4">
+        <%= form.label :to, class: "control-label" %>
+        <%= form.date_field :checkout_on, class: "form-control", id: "checkout_date" %>
       </div>
 
-      <div class="form-group">
-        <%= form.label :value, class: "control-label" %>
+      <div class="form-group mb-4">
+        <%= form.label :address_to_send_the_poster, class: "control-label" %>
         <%= form.text_field :value, class: "form-control" %>
       </div>
 
-      <br>
+      <div class="form-group mb-4">
+        <%= form.label :total_price, class: "control-label"%>
+        <%= form.text_field :value, class: "form-control", id: "booking_value"%>
+        <p>Total Price: <%= @total_price %></p>
+      </div>
 
       <div class="form-group">
         <%= form.submit "Send request", class: "btn btn-flat" %>
       </div>
     <% end %>
   </div>
+</div>
