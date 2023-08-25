@@ -22,7 +22,7 @@
             <%= image_tag booking.poster.photo, class: "img-thumbnail align-right", size: "40x20", style: "float: right;"%></td>
         <td><%= booking.checkin_on %></td>
         <td><%= booking.checkout_on %></td>
-        <td><%= number_to_currency(booking.poster.price_per_day, unit: 'CAD') %></td>
+        <td><%= number_to_currency(booking.poster.price_per_day * (booking.checkout_on - booking.checkin_on), unit: 'CAD') %></td>
         <td>
           <% if booking.status.nil?  %>
             Pending

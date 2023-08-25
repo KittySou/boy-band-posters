@@ -4,9 +4,8 @@ class Poster < ApplicationRecord
   has_many :bookings, dependent: :destroy
   validates :photo, presence: true
 
-  #include PgSearch::Model
+  include PgSearch::Model
 
-  # multisearchable against: [:band_name, :description]
 
   pg_search_scope :search_by_band_name_and_description,
                   against: [:band_name, :description],
