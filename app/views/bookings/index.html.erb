@@ -18,8 +18,7 @@
       <tbody>
         <% @bookings.each do |booking| %>
           <tr>
-            <td><%= booking.user.first_name %>
-            <%= image_tag url_for(booking.user.photo), class: "img-thumbnail align-right", size: "40x20", style: "float: right;"%></td>
+            <td><%= booking.user.first_name %></td>
             <td><%= booking.poster.band_name  %>
             <%= image_tag booking.poster.photo, class: "img-thumbnail align-right", size: "40x20", style: "float: right;"%></td>
             <td><%= booking.checkin_on %></td>

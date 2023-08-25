@@ -15,9 +15,6 @@ user_1 = User.create!(email:"marcelo@live.com", password:"123456" ,first_name:"M
 user_2 = User.create!(email:"justin@live.com", password:"123456" ,first_name:"Justin", last_name:"User")
 
 user_3 = User.create!(email:"grant@live.com", password:"123456" ,first_name:"Grant", last_name:"User")
-file = URI.open("https://ca.slack-edge.com/T02NE0241-U05FPM79L30-26c38e3ea534-512")
-user_3.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-user_3.save!
 
 user_4 = User.create!(email:"kitty@live.com", password:"123456" ,first_name:"Kitty", last_name:"User")
 
