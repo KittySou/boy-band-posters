@@ -46,7 +46,9 @@
   margin-right: 50px;
 }
 
-
+h3 {
+  font-size: 40px;
+}
 
 .poster-index a {
   text-decoration: none;
@@ -64,4 +66,9 @@
   background-color: $green;
   box-shadow: 0 0 9px rgba(0,0,0,1);
   color: white;
+}
+
+.row {
+  background-color: $blue;
+  padding: 20px;
 }
