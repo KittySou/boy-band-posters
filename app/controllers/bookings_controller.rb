@@ -5,10 +5,9 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking_params)
-    @poster = Poster.find(params[:id])
-
-    if @booking.save
+    @booking = Booking.new('booking _params')
+    @booking.poster = @poster
+    if @review.save
       redirect_to poster_path(@poster)
     else
       render :new, status: :unprocessable_entity
@@ -29,9 +28,24 @@ class BookingsController < ApplicationController
     redirect_to booking_path(@booking)
   end
 
-  def index
-    @bookings = Booking.all
-  end
+    def index
+      @bookings = Booking.all
+    end
+
+    def show
+      @booking = Booking.find(params[:id])
+    end
+
+
+    private
+
+    def booking_params
+      params.require(:booking).permit(:checkin_on, :checkout_on, :value, :status, :create)
+    end
+
+    def set_booking
+      @booking = Booking.find(params[:id])
+    end
 
   def show
     @booking = Booking.find(params[:id])
