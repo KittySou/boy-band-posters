@@ -58,8 +58,27 @@ poster_8.save!
 poster_9 = Poster.new(band_name: "THE BEATLES", description: "THE BEATLES Official Poster Book", price_per_day:20, height:90, width:45, user:user_3)
 file = URI.open("https://i.ebayimg.com/images/g/GH0AAOSw1~tef1hN/s-l1200.jpg")
 poster_9.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-poster_9.save
+poster_9.save!
 
+poster_10 = Poster.new(band_name: "NSYNC", description: "No Strings Attached", price_per_day:25, height:61, width:91, user:user_1)
+file = URI.open("https://i.ebayimg.com/images/g/I70AAOSwzKxhlp1Z/s-l1600.jpg")
+poster_10.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+poster_10.save!
+
+poster_11 = Poster.new(band_name: "NSYNC", description: "NSYNC UK Version", price_per_day:25, height:59, width:81, user:user_2)
+file = URI.open("https://cdn.shoplightspeed.com/shops/634895/files/53601938/1600x2048x2/nsync-nsync-25th-anniversary.jpg")
+poster_11.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+poster_11.save!
+
+poster_12 = Poster.new(band_name: "MUSE", description: "Trio Artwork", price_per_day:20, height:65, width:89, user:user_3)
+file = URI.open("https://static.printler.com/cache/d/0/1/8/a/e/d018aee55f695720caa72e0805b9055a05ee77cc.jpg")
+poster_12.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+poster_12.save!
+
+poster_13 = Poster.new(band_name: "BTS", description: "Multi-Colored", price_per_day:20, height:50, width:87, user:user_1)
+file = URI.open("https://m.media-amazon.com/images/I/61zqJz0KpHL._AC_SL1000_.jpg")
+poster_13.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+poster_13.save!
 
 Booking.destroy_all
 users = User. all
