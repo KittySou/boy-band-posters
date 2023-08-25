@@ -2,7 +2,7 @@ class PostersController < ApplicationController
   def index
     @posters = Poster.all
     if params[:query].present?
-      @posters = Poster.global_search(params[:query])
+      @posters = Poster.search_by_band_name_and_description(params[:query])
     end
   end
 

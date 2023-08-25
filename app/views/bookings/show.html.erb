@@ -1,21 +1,21 @@
-
-
-  <% if @booking.status == true %>
-    <div class="card">
+<%# <% raise %>
+<div>
+  <div class="card">
+    <% if @booking.status == true %>
       <h1>Congrats! Your booking is confirmed 🥳</h1>
 
-        <p><strong>Booking Id:</strong> <%= @booking.id %></p>
-        <p><strong>Start-Date:</strong> <%= @booking.checkin_on %></p>
-        <p><strong>End-Date:</strong> <%= @booking.checkout_on %></p>
-        <p><strong>Value:</strong> <%= number_to_currency(@booking.poster.price_per_day, unit: 'CAD') %></p>
-        <p><strong>Status:</strong> <%= @booking.status ? 'Confirm' : 'Cancel' %></p>
+      <p><strong>Booking Id:</strong> <%= @booking.id %></p>
+      <p><strong>Start-Date:</strong> <%= @booking.checkin_on %></p>
+      <p><strong>End-Date:</strong> <%= @booking.checkout_on %></p>
+      <p><strong>Value:</strong> <%= number_to_currency(@booking.poster.price_per_day, unit: 'CAD') %></p>
+      <p><strong>Status:</strong> <%= @booking.status ? 'Confirm' : 'Cancel' %></p>
 
-      <% else @booking.status == false %>
-        <h1>You droped the booking 😔</h1>
-        <p>Booking not found</p>
-      <% end %>
+    <% else @booking.status == false %>
+      <h1>You droped the booking 😔</h1>
+      <p>Booking not found</p>
+    <% end %>
+  </div>
 
   <%= link_to 'Back to bookings', bookings_path, class: 'btn btn-secondary btn-sm' %>
 
-  </div>
 </div>
