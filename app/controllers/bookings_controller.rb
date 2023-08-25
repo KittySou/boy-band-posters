@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-
   def index
     @bookings_user = Booking.where(user: current_user)
   end
@@ -9,30 +8,37 @@ class BookingsController < ApplicationController
   end
 
   def create
+<<<<<<< HEAD
     @booking = Booking.new('booking _params')
     @booking.poster = @poster
     if @review.save
+=======
+    @booking = Booking.new(booking_params)
+    @poster = Poster.find(params[:id])
+
+    if @booking.save
+>>>>>>> master
       redirect_to poster_path(@poster)
     else
       render :new, status: :unprocessable_entity
     end
   end
 
-    def destroy
-      @booking = Booking.find(params[:id])
-      @booking.destroy
-      redirect_to bookings_path, status: :see_other
-    end
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to bookings_path, status: :see_other
+  end
 
- # If statement for status, ALWAYS TRUE OR FALSE
   def update
-
+    # If statement for status, ALWAYS TRUE OR FALSE
     set_booking
     @booking.status = true
     @booking.save!
     redirect_to booking_path(@booking)
   end
 
+<<<<<<< HEAD
     def index
       @bookings = Booking.all
     end
@@ -54,4 +60,29 @@ class BookingsController < ApplicationController
     def set_booking
       @booking = Booking.find(params[:id])
     end
+=======
+  def index
+    @bookings = Booking.all
+>>>>>>> master
   end
+
+  def show
+    @booking = Booking.find(params[:id])
+  end
+
+  def total_price
+    @poster = Poster.find(params[:id])
+    @total_days = (@booking.checkout_on - @booking.checkin_on).to_i
+    @total_price = total_days * @booking.price_per_day
+  end
+
+  private
+
+  def booking_params
+    params.require(:booking).permit(:checkin_on, :checkout_on, :value, :status)
+  end
+
+  def set_booking
+    @booking = Booking.find(params[:id])
+  end
+end

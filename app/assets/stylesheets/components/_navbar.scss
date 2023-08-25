@@ -3,8 +3,10 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: #b3e6f9;
-  border-bottom-color: rgb(251, 229, 102);
-  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: $green;
+  border-bottom-width: 20px;
+  margin-bottom: 10px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -20,13 +22,13 @@
   padding: 6px 16px;
   margin-left: 5px;
   margin-right: 5px;
-  border-radius: 11px;
+  border-radius: 3px;
   background: rgb(255, 235, 122);
   transition: background 0.3s ease;
 }
 
 .btn-flat:hover {
-  background: pink;
+  background: $green;
   color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }

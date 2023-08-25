@@ -1,49 +1,55 @@
 .card-product {
   overflow: hidden;
-  height: 250px;
-  background: pink;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  height: 150px;
+  background: $blue;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 200px;
+  margin-right: 200px;
+  border-radius: 3px;
+}
+
+.home-title {
+  font-family: handjet;
+}
+
+.card-product:hover {
+  overflow: hidden;
+  height: 185px;
+  background: $yellow;
+  box-shadow: 0 0 15px rgba(0,0,0,1);
+  display: flex;
+  align-items: left;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 155px;
+  margin-right: 230px;
 }
 
 .card-title {
+  font-family: handjet;
   text-decoration: none;
-  underline: none;
+  font-weight: 900;
+  font-size: 90px;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(0,0,0,1);
 }
 
-// height: 400, width: 250, crop: :fill
 .card-product img {
   height: 100%;
-  width: 160px;
+  width: 120px;
   object-fit: cover;
   padding: 10px;
+  margin-right: 50px;
 }
 
-.card-product h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-  text-decoration: none;
-}
 
-.card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
-
-.card-product .card-product-infos {
-  padding: 16px;
-  text-decoration: none;
-}
 
 .poster-index a {
   text-decoration: none;
+  // color: blue($color: #000000);
+  // font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
