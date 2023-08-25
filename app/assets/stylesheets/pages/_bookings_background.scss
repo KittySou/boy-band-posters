@@ -1,0 +1,41 @@
+    /* Estilos para as células do cabeçalho da tabela (th) */
+    th {
+      padding: 10px;
+    }
+
+    /* Estilos para as células da tabela (td) */
+    td {
+      padding: 10px;
+      border: 1px solid #dee2e6; /* Borda das células */
+    }
+
+    /* Estilos para as imagens dentro das células */
+    .img-thumbnail {
+      float: right;
+      margin-left: 10px;
+    }
+
+    /* Estilos para os botões de ação */
+    .btn {
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 12px;
+      margin: 2px;
+      cursor: pointer;
+    }
+
+    /* Estilos para o botão "Confirm" */
+    .btn-success {
+      background-color: #28a745; /* Cor de fundo verde */
+      color: white; /* Cor do texto */
+      border: none;
+    }
+
+    /* Estilos para o botão "Decline" */
+    .btn-danger {
+      background-color: #dc3545; /* Cor de fundo vermelha */
+      color: white; /* Cor do texto */
+      border: none;
+    }

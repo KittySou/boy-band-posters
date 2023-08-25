@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+
   def index
     @bookings_user = Booking.where(user: current_user)
     @bookings = Booking.all
