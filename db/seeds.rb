@@ -20,7 +20,21 @@ user_4 = User.create!(email:"kitty@live.com", password:"123456" ,first_name:"Kit
 
 user_5 = User.create!(email:"david@live.com", password:"123456" ,first_name:"David", last_name:"User")
 
+user_6 = User.create!(email:"audrey@live.com", password:"123456" ,first_name:"Audrey", last_name:"User")
 
+user_7 = User.create!(email:"marcela@live.com", password:"123456" ,first_name:"Marcela", last_name:"User")
+
+user_8 = User.create!(email:"joe@live.com", password:"123456" ,first_name:"Joe", last_name:"User")
+
+user_9 = User.create!(email:"seb@live.com", password:"123456" ,first_name:"Seb", last_name:"User")
+
+user_10 = User.create!(email:"priscilla@live.com", password:"123456" ,first_name:"Priscilla", last_name:"User")
+
+user_11 = User.create!(email:"sergio@live.com", password:"123456" ,first_name:"Sergio", last_name:"User")
+
+user_12 = User.create!(email:"grace@live.com", password:"123456" ,first_name:"Grace", last_name:"User")
+
+user_13 = User.create!(email:"daphne@live.com", password:"123456" ,first_name:"Daphné", last_name:"User")
 
 
 poster_1 = Poster.new(band_name: "NSYNC", description: "NSYNC Official Poster Book", price_per_day:10, height:40, width:20, user:user_1)

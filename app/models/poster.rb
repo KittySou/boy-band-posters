@@ -4,9 +4,9 @@ class Poster < ApplicationRecord
   has_many :bookings, dependent: :destroy
   validates :photo, presence: true
 
-  include PgSearch::Model
+  #include PgSearch::Model
 
-  multisearchable against: [:band_name, :description]
+  # multisearchable against: [:band_name, :description]
 
   pg_search_scope :search_by_band_name_and_description,
                   against: [:band_name, :description],
@@ -14,12 +14,4 @@ class Poster < ApplicationRecord
                     tsearch: { prefix: true }
                   }
 
-  pg_search_scope :global_search,
-                  against: [:band_name, :description],
-                  associated_against: {
-                    bookings: [:value]
-                  },
-                  using: {
-                    tsearch: { prefix: true }
-                  }
 end
