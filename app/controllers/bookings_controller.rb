@@ -48,17 +48,9 @@ class BookingsController < ApplicationController
 
     private
 
-    def booking_params
-      params.require(:booking).permit(:checkin_on, :checkout_on, :value, :status, :create)
-    end
-
     def set_booking
       @booking = Booking.find(params[:id])
     end
-
-  def show
-    @booking = Booking.find(params[:id])
-  end
 
   def total_price
     @poster = Poster.find(params[:id])
@@ -66,13 +58,8 @@ class BookingsController < ApplicationController
     @total_price = total_days * @booking.price_per_day
   end
 
-  private
-
   def booking_params
     params.require(:booking).permit(:checkin_on, :checkout_on, :value, :status)
   end
 
-  def set_booking
-    @booking = Booking.find(params[:id])
-  end
 end
