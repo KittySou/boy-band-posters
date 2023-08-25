@@ -32,3 +32,15 @@
   color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+
+.btn-primary {
+  background-color: $yellow;
+  border-color: transparent;
+  border-radius: 3px;
+}
+
+.btn-primary:hover {
+  background: $green;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  color: white;
+}
