@@ -1,3 +1,13 @@
-<h1>It's confirmed yay</h1>
 
-<%= @final_price %>
+<div>
+  <div class="card">
+
+    <h1>Your booking is confirmed yay! 🥳</h1>
+    <h2>Here is your final price:</h2>
+    <h2><%= @final_price %>$</h2>
+
+    <%= link_to 'Back to bookings', bookings_path, class: 'btn btn-secondary btn-sm' %>
+  </div>
+
+
+</div>
