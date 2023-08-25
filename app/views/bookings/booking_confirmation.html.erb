@@ -1,26 +1,23 @@
-<%#
-<div class="card mb-3" style="max-width: 1000px;">
-  <div>
+<style>
+  .custom-card {
+    font-family: Arial, sans-serif;
+  }
+</style>
 
-    <h1>Your booking is confirmed yay! 🥳</h1>
-    <h3><%= @booking.poster.band_name %>
-
-
-
-<div class="card mb-3" style="max-width: 540px;">
+<div class="card mb-3 custom-card" style="max-width: 1000px;">
   <div class="row g-0">
-    <div class="col-md-4">
-      <img src="..." class="img-fluid rounded-start" alt="...">
+    <div class="col-md-6">
+      <%= image_tag @booking.poster.photo, class: "img-thumbnail rounded float-right", style: "max-width: 100%; height: auto;" %>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-6" style="background-color: pink;" >
       <div class="card-body">
-        <h2>Here is your final price:</h2>
-        <h2><%= @final_price %>$</h2>
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <h1 class="card-title" style="font-size: 2rem; font-weight: bold;">Your Booking is Confirmed! 🎉</h1>
+        <h3 class="card-subtitle mb-2"><%= @booking.poster.band_name %></h3>
+        <p class="card-text"><%= @poster.description %></p>
+        <h3 class="card-title">Final Price:</h3>
+        <h3 class="card-title"><%= @final_price %>$</h3>
+        <%= link_to 'Back to Bookings', bookings_path, class: 'btn btn-secondary btn-sm mt-3' %>
       </div>
     </div>
-    <%= link_to 'Back to bookings', bookings_path, class: 'btn btn-secondary btn-sm' %>
   </div>
 </div>

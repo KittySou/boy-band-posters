@@ -1,21 +1,24 @@
 
-<div>
-  <div class="card">
-    <% if @booking.status == true %>
-      <h1>Congrats! Your booking is confirmed 🥳</h1>
+<style>
+  .custom-card {
+    font-family: Arial, sans-serif;
+  }
+</style>
 
-      <p><strong>Booking Id:</strong> <%= @booking.id %></p>
-      <p><strong>Start-Date:</strong> <%= @booking.checkin_on %></p>
-      <p><strong>End-Date:</strong> <%= @booking.checkout_on %></p>
-      <p><strong>Value:</strong> <%= number_to_currency(@booking.poster.price_per_day * (@booking.checkout_on - @booking.checkin_on), unit: 'CAD') %></p>
-      <p><strong>Status:</strong> <%= @booking.status ? 'Confirm' : 'Cancel' %></p>
-
-    <% else @booking.status == false %>
-      <h1>You droped the booking 😔</h1>
-      <p>Booking not found</p>
-    <% end %>
+<div class="card mb-3 custom-card" style="max-width: 1000px;">
+  <div class="row g-0">
+    <div class="col-md-6">
+      <%= image_tag @booking.poster.photo, class: "img-thumbnail rounded float-right", style: "max-width: 100%; height: auto;" %>
+    </div>
+    <div class="col-md-6" style="background-color: pink;" >
+      <div class="card-body">
+        <h1 class="card-title" style="font-size: 2rem; font-weight: bold;">Congrats! Your booking is confirmed </h1>
+        <h3 class="card-subtitle mb-2"><%= @booking.poster.band_name %></h3>
+        <p class="card-text"><%= @booking.poster.description %></p>
+        <p><strong>Start-Date:</strong> <%= @booking.checkin_on %></p>
+        <p><strong>End-Date:</strong> <%= @booking.checkout_on %></p>
+        <%= link_to 'Back to bookings', bookings_path, class: 'btn btn-secondary btn-sm' %>
+      </div>
+    </div>
   </div>
-
-  <%= link_to 'Back to bookings', bookings_path, class: 'btn btn-secondary btn-sm' %>
-
 </div>
