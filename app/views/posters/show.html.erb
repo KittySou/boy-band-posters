@@ -1,14 +1,19 @@
+
 <div class="show-container">
-  <h1><%= @poster.band_name %></h1>
+  <h1 class="show-title" style="margin-left: 10px; font-family: handjet; font-size: 90px;"><%= @poster.band_name %></h1>
   <div class="row">
     <%= image_tag @poster.photo, class: "col-4 show-image"%>
-
     <div class="col-8" id="show-details">
       <h3><i class="fa-solid fa-circle-info"></i> <%= @poster.description %></h3>
       <h3><i class="fa-solid fa-dollar-sign"></i> <%= @poster.price_per_day %></h3>
       <h3><i class="fa-solid fa-up-down"></i> cm <%= @poster.height %></h3>
       <h3><i class="fa-solid fa-arrows-left-right"></i> cm <%= @poster.width %></h3>
-      <%= link_to "Rent poster now!", new_poster_booking_path(@poster), class: "btn btn-flat" %>
+
+      <%= link_to "Request to rent poster!", new_poster_booking_path(@poster), class: "btn btn-flat" %>
+
     </div>
   </div>
 </div>
+
+
+<%# style=" max-height: 600px; max-width: 400px; object-fit: cover; margin-left: 25px; %>

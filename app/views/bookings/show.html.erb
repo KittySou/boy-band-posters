@@ -7,7 +7,7 @@
       <p><strong>Booking Id:</strong> <%= @booking.id %></p>
       <p><strong>Start-Date:</strong> <%= @booking.checkin_on %></p>
       <p><strong>End-Date:</strong> <%= @booking.checkout_on %></p>
-      <p><strong>Value:</strong> <%= number_to_currency(@booking.poster.price_per_day, unit: 'CAD') %></p>
+      <p><strong>Value:</strong> <%= number_to_currency(@booking.poster.price_per_day * (@booking.checkout_on - @booking.checkin_on), unit: 'CAD') %></p>
       <p><strong>Status:</strong> <%= @booking.status ? 'Confirm' : 'Cancel' %></p>
 
     <% else @booking.status == false %>
