@@ -53,3 +53,15 @@
   // color: blue($color: #000000);
   // font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+.poster-button {
+  background-color: $yellow;
+  border-radius: 3px;
+  border: none;
+}
+
+.poster-button:hover {
+  background-color: $green;
+  box-shadow: 0 0 9px rgba(0,0,0,1);
+  color: white;
+}
