@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   def index
     @bookings_user = Booking.where(user: current_user)
+    @bookings = Booking.all
   end
 
   def new
@@ -8,16 +9,9 @@ class BookingsController < ApplicationController
   end
 
   def create
-<<<<<<< HEAD
     @booking = Booking.new('booking _params')
     @booking.poster = @poster
     if @review.save
-=======
-    @booking = Booking.new(booking_params)
-    @poster = Poster.find(params[:id])
-
-    if @booking.save
->>>>>>> master
       redirect_to poster_path(@poster)
     else
       render :new, status: :unprocessable_entity
@@ -38,7 +32,6 @@ class BookingsController < ApplicationController
     redirect_to booking_path(@booking)
   end
 
-<<<<<<< HEAD
     def index
       @bookings = Booking.all
     end
@@ -47,9 +40,6 @@ class BookingsController < ApplicationController
       @booking = Booking.find(params[:id])
     end
 
-    def new
-      @booking = Booking.new
-    end
 
     private
 
@@ -61,10 +51,6 @@ class BookingsController < ApplicationController
       @booking = Booking.find(params[:id])
     end
 =======
-  def index
-    @bookings = Booking.all
->>>>>>> master
-  end
 
   def show
     @booking = Booking.find(params[:id])
