@@ -58,8 +58,12 @@ poster_8.save!
 poster_9 = Poster.new(band_name: "THE BEATLES", description: "THE BEATLES Official Poster Book", price_per_day:20, height:90, width:45, user:user_3)
 file = URI.open("https://i.ebayimg.com/images/g/GH0AAOSw1~tef1hN/s-l1200.jpg")
 poster_9.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-poster_9.save
+poster_9.save!
 
+poster_10 = Poster.new(band_name: "NSYNC", description: "No Strings Attached", price_per_day:25, height:61, width:91, user:user_1)
+file = URI.open("https://i.ebayimg.com/images/g/I70AAOSwzKxhlp1Z/s-l1600.jpg")
+poster_10.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+poster_10.save!
 
 Booking.destroy_all
 users = User. all
