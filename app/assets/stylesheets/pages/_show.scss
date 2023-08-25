@@ -1,5 +1,13 @@
 @import "home";
 
+body {
+  background-color: $blue;
+}
+
+.row {
+  margin-left: 50px;
+}
+
 .show-image {
   max-height: 70opx;
   margin-right: 10 px;
@@ -8,22 +16,18 @@
   box-shadow: 5px 5px 2px #ccc;
 }
 
-#show-details {
-  font-size: 30px;
-}
-
 .btn-flat {
   color: black;
   padding: 6px 16px;
   margin-left: 5px;
   margin-right: 5px;
-  border-radius: 11px;
+  border-radius: 2px;
   background: rgb(255, 235, 122);
   transition: background 0.3s ease;
 }
 
 .btn-flat:hover {
-  background: #fa8ddb;
+  background: $green;
   color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
