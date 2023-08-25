@@ -10,9 +10,31 @@ require "open-uri"
 Poster.destroy_all
 User.destroy_all
 
-user_1 = User.create!(email:"marcelo@live.com", password:"123456" ,first_name:"Marcelo" , last_name:"Amaral" )
-user_2 = User.create!(email:"justin@live.com", password:"123456" ,first_name:"Justin" , last_name:"Bieber" )
-user_3 = User.create!(email:"lewis@live.com", password:"123456" ,first_name:"Lewis" , last_name:"Hamilton" )
+user_1 = User.create!(email:"marcelo@live.com", password:"123456" ,first_name:"Marcelo", last_name:"User")
+
+user_2 = User.create!(email:"justin@live.com", password:"123456" ,first_name:"Justin", last_name:"User")
+
+user_3 = User.create!(email:"grant@live.com", password:"123456" ,first_name:"Grant", last_name:"User")
+
+user_4 = User.create!(email:"kitty@live.com", password:"123456" ,first_name:"Kitty", last_name:"User")
+
+user_5 = User.create!(email:"david@live.com", password:"123456" ,first_name:"David", last_name:"User")
+
+user_6 = User.create!(email:"audrey@live.com", password:"123456" ,first_name:"Audrey", last_name:"User")
+
+user_7 = User.create!(email:"marcela@live.com", password:"123456" ,first_name:"Marcela", last_name:"User")
+
+user_8 = User.create!(email:"joe@live.com", password:"123456" ,first_name:"Joe", last_name:"User")
+
+user_9 = User.create!(email:"seb@live.com", password:"123456" ,first_name:"Seb", last_name:"User")
+
+user_10 = User.create!(email:"priscilla@live.com", password:"123456" ,first_name:"Priscilla", last_name:"User")
+
+user_11 = User.create!(email:"sergio@live.com", password:"123456" ,first_name:"Sergio", last_name:"User")
+
+user_12 = User.create!(email:"grace@live.com", password:"123456" ,first_name:"Grace", last_name:"User")
+
+user_13 = User.create!(email:"daphne@live.com", password:"123456" ,first_name:"Daphné", last_name:"User")
 
 
 poster_1 = Poster.new(band_name: "NSYNC", description: "NSYNC Official Poster Book", price_per_day:10, height:40, width:20, user:user_1)
@@ -93,5 +115,29 @@ booking_2 = Booking.create(
 )
 
 booking_3 = Booking.create(
-  checkin_on: Date.today + 1, checkout_on: Date.today + 3, user: users.sample, poster: posters.sample, status: nil
+  checkin_on: Date.today + 3, checkout_on: Date.today + 5, user: users.sample, poster: posters.sample, status: nil
+)
+
+booking_4 = Booking.create(
+  checkin_on: Date.today + 4, checkout_on: Date.today + 6, user: users.sample, poster: posters.sample, status: nil
+)
+
+booking_5 = Booking.create(
+  checkin_on: Date.today + 5, checkout_on: Date.today + 7, user: users.sample, poster: posters.sample, status: nil
+)
+
+booking_6 = Booking.create(
+  checkin_on: Date.today + 6, checkout_on: Date.today + 8, user: users.sample, poster: posters.sample, status: nil
+)
+
+booking_7 = Booking.create(
+  checkin_on: Date.today + 7, checkout_on: Date.today + 9, user: users.sample, poster: posters.sample, status: nil
+)
+
+booking_8 = Booking.create(
+  checkin_on: Date.today + 8, checkout_on: Date.today + 10, user: users.sample, poster: posters.sample, status: nil
+)
+
+booking_9 = Booking.create(
+  checkin_on: Date.today + 9, checkout_on: Date.today + 11, user: users.sample, poster: posters.sample, status: nil
 )
