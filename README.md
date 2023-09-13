@@ -4,6 +4,7 @@
 <p>This web app allows you to rent and put up for rent boyband posters!</p>
 
 <br>
+<br>
 
 <p>As one of Le Wagon's projects, we built an Airbnb clone app in just 5 days using Ruby on Rails.</p>
 
