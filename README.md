@@ -1,4 +1,4 @@
-# 👨‍🎤🧑‍🎤Looking to rent a Boyband poster or even put one up for rent?👩‍🎤👨‍🎤
+## 👨‍🎤🧑‍🎤Looking to rent a Boyband poster or even put one up for rent?👩‍🎤👨‍🎤
 ## Don't look any further!
 
 <p>This web app allows you to rent and put up for rent boyband posters.</p>
