@@ -1,4 +1,4 @@
-# Boyband posters 😎
+# Boyband posters 👨‍🎤🧑‍🎤👩‍🎤
 <p>As one of Le Wagon's projects, we built an Airbnb clone app under 5 days.</p>
 <p>This app allows you to rent and put up for rent boyband posters.</p>
 
